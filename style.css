@@ -1,0 +1,213 @@
+/* -------- GLOBAL STYLES -------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f9fc;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Container */
+section {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+
+/* -------- HEADER / HERO -------- */
+
+.hero {
+    background: linear-gradient(to bottom right, #004aad, #007bff);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Small header for inner pages */
+.small-header {
+    background: #004aad;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.small-header h1 {
+    font-size: 30px;
+}
+
+
+/* -------- BUTTONS -------- */
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #004aad;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: white;
+}
+
+
+/* -------- FEATURES (HOME PAGE BOXES) -------- */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.box h3 {
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+/* -------- SERVICES PAGE -------- */
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.service-item h2 {
+    color: #004aad;
+}
+
+
+/* -------- ABOUT PAGE -------- */
+
+.about-section ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.about-section li {
+    margin-bottom: 8px;
+}
+
+
+
+/* -------- PRICING -------- */
+
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.price-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.price-box h3 {
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.price-box p {
+    margin-bottom: 8px;
+}
+
+
+/* -------- GALLERY -------- */
+
+.gallery {
+    text-align: center;
+    color: #004aad;
+    font-size: 18px;
+}
+
+
+
+/* -------- CONTACT PAGE -------- */
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+}
+
+.contact-section textarea {
+    height: 120px;
+}
+
+.contact-section button {
+    background: #004aad;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    opacity: .8;
+}
+
+
+
+/* -------- FOOTER -------- */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #004aad;
+    color: white;
+    margin-top: 40px;
+}
