@@ -1,94 +1,136 @@
-/* -------- GLOBAL STYLES -------- */
+/* -------- GLOBAL -------- */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background: #f8f9fc;
+    background: #f5f7fb;
     color: #222;
-    line-height: 1.6;
 }
 
 /* Container */
 section {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
+/* -------- NAVBAR -------- */
 
-/* -------- HEADER / HERO -------- */
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    padding: 18px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #004aad;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #004aad;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Mobile Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* -------- HERO SECTION -------- */
 
 .hero {
-    background: linear-gradient(to bottom right, #004aad, #007bff);
+    background: linear-gradient(to right, #004aad, #007bff);
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 130px 20px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 45px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 20px;
 }
-
-/* Small header for inner pages */
-.small-header {
-    background: #004aad;
-    padding: 40px 20px;
-    text-align: center;
-    color: white;
-}
-
-.small-header h1 {
-    font-size: 30px;
-}
-
-
-/* -------- BUTTONS -------- */
 
 .btn {
     display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    font-size: 16px;
     background: white;
     color: #004aad;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 40px;
     text-decoration: none;
-    border: 2px solid white;
-    transition: .3s;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background: transparent;
     color: white;
+    border: 2px solid white;
 }
 
-
-/* -------- FEATURES (HOME PAGE BOXES) -------- */
+/* -------- FEATURE BOXES -------- */
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-    padding-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: -30px;
 }
 
 .box {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
 }
 
 .box h3 {
@@ -96,118 +138,108 @@ section {
     margin-bottom: 10px;
 }
 
+
 /* -------- SERVICES PAGE -------- */
 
 .services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .service-item {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-.service-item h2 {
-    color: #004aad;
-}
-
-
-/* -------- ABOUT PAGE -------- */
-
-.about-section ul {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-.about-section li {
-    margin-bottom: 8px;
-}
-
-
-
-/* -------- PRICING -------- */
-
-.pricing {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.price-box {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.price-box h3 {
-    color: #004aad;
-    margin-bottom: 10px;
-}
-
-.price-box p {
-    margin-bottom: 8px;
+.service-item:hover {
+    transform: translateY(-5px);
 }
 
 
 /* -------- GALLERY -------- */
 
-.gallery {
-    text-align: center;
-    color: #004aad;
-    font-size: 18px;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
 }
 
 
-
-/* -------- CONTACT PAGE -------- */
+/* -------- CONTACT -------- */
 
 .contact-section form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+    gap: 15px;
 }
 
-.contact-section input,
-.contact-section textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
+input, textarea {
+    padding: 14px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
     outline: none;
-    border-radius: 5px;
+    font-size: 16px;
 }
 
-.contact-section textarea {
-    height: 120px;
+textarea {
+    height: 130px;
 }
 
-.contact-section button {
+button {
     background: #004aad;
+    padding: 14px;
     color: white;
-    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
     border: none;
-    border-radius: 5px;
-    font-weight: bold;
     cursor: pointer;
 }
-
-.contact-section button:hover {
-    opacity: .8;
-}
-
 
 
 /* -------- FOOTER -------- */
 
 footer {
-    text-align: center;
-    padding: 20px;
     background: #004aad;
     color: white;
+    text-align: center;
+    padding: 25px;
     margin-top: 40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+/* -------- MOBILE VIEW -------- */
+
+@media(max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
